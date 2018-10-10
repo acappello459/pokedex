@@ -87,9 +87,8 @@ $.ajax({url: "https://fizal.me/pokeapi/api/" + acPokedex.pokedex[i].pokeNumber +
 success: function(response){
 console.log(response)
 hookImage(response)
-hookType(response)
 hookName(response)
-hookHp(response)
+hookInfo(response)
   }
 })
 }
@@ -99,11 +98,8 @@ picture.style.backgroundImage = "url("+x.sprites.front_default+")"
 }
 
 function hookName(x){
-pokemon.innerHTML = x.name;
+pokemon.innerHTML = "Name: "+x.name;
   }
-function hookType(x){
-info.innerHTML = x.types[0].type.name;
+function hookInfo(x){
+info.innerHTML = "Type: " + x.types[0].type.name + ", HP: " +x.stats[5].base_stat + ", Attack: " + x.stats[4].base_stat + ", Defense: " + x.stats[3].base_stat;
   }
-function hookHp(x){
-  console.log(x.stats[5].base_stat)
-}
