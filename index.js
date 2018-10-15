@@ -108,7 +108,7 @@ pokemonInfo.innerHTML = "Type: " + x.types[0].type.name + ", HP: " +x.stats[5].b
 random.addEventListener('click', randomPokemon)
 
 function randomPokemon(){
-let j = Math.floor(Math.random()*152)
+let j = Math.floor(Math.random()*800)
 $.ajax({url: "https://fizal.me/pokeapi/api/" + j + ".json",
 // data: {name: searchBar.value},
 success: function(response){

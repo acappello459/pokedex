@@ -101,9 +101,10 @@ grid-template-rows: 1fr 1fr 1fr;
 img{
   grid-column: 3/4;
   grid-row: 1/2;
-  /* position: relative; */
-  /* margin-left: 50%; */
-  /* margin-bottom: 80%; */
+  /* min-width: 100px; */
+width: 75%;
+height: 50%;
+
 }
 #randomButton{
   grid-column: 2/3;
